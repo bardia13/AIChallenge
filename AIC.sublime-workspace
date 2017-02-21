@@ -1,0 +1,362 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"myfile",
+				"myfilein"
+			],
+			[
+				"myfi",
+				"myfilein"
+			],
+			[
+				"myFile",
+				"myfilein"
+			],
+			[
+				"myfil",
+				"myfileout"
+			],
+			[
+				"my",
+				"myfilein"
+			],
+			[
+				"main",
+				"mainparent"
+			],
+			[
+				"j",
+				"join"
+			],
+			[
+				"ma",
+				"maxn"
+			],
+			[
+				"do",
+				"done"
+			],
+			[
+				"cin",
+				"continue"
+			],
+			[
+				"be",
+				"bellmanford"
+			],
+			[
+				"size",
+				"srcSize"
+			],
+			[
+				"le",
+				"len"
+			],
+			[
+				"in",
+				"input"
+			],
+			[
+				"pu",
+				"pushBack"
+			],
+			[
+				"inc",
+				"include"
+			],
+			[
+				"en",
+				"endl"
+			],
+			[
+				"sr",
+				"src"
+			],
+			[
+				"src",
+				"srcSize"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "#include <iostream>\n#include <vector>\n#define MAXN 300\n\n\nusing namespace std ;\nint n ;\nint m ;\nchar in[MAXN][MAXN] ;\nint flag[MAXN][MAXN];\n\nvoid dfsv(int i, int j){\n\tflag[i][j] = 1 ;\n\tif (i-1 >= 0 && in[i-1][j] == '#' && flag[i-1][j] != 1)\n\t\tdfsv(i-1,j) ;\n\tif (j-1 >= 0 && in[i][j-1] == '#' && flag[i][j-1] != 1)\n\t\tdfsv(i,j-1) ;\n\tif (j+1 < m && in[i][j+1] == '#' && flag[i][j+1] != 1)\n\t\tdfsv(i,j+1) ;\n\tif (i+1 < n && in[i+1][j] == '#' && flag[i+1][j] != 1)\n\t\tdfsv(i+1,j) ;\n\n}\n\nint main(){\n\tcin >> n >> m  ;\n\t\n\tfor (int i = 0;i < n;i++){\n\t\tstring x ;\n\t\tcin >> x ;\n\t\tfor (int j = 0 ;j < x.size() ;j++){\n\t\t\tin[i][j] = x[j] ;\n\t\t}\n\t}\n\t// for (int i = 0 ;i < n;i++){\n\t// \tfor (int j = 0 ;j < m ;j++){\n\t// \t\tif (in[i][j] == '#'){\n\t// \t\t\tif ((i-1 >= 0 ) && (in[i-1][j] == '#')){\n\t// \t\t\t\talist((i*n)+j).push_back(((i-1)*n)+j) ;\n\t// \t\t\t\talist(((i-1)*n)+j).push_back((i*n)+j) ; \n\t// \t\t\t}\n\t// \t\t\tif ((j-1 >= 0 ) && (in[i][j-1] == '#')){\n\t// \t\t\t\talist((i*n)+j).push_back((i*n)+j-1) ;\n\t// \t\t\t\talist((i*n)+j-1).push_back((i*n)+j) ; \n\t// \t\t\t}\n\n\t// \t\t}\n\t// \t}\n\t// }\n\n\tint sum = 0 ;\n\t for (int i = 0 ;i < n;i++){\n\t\tfor (int j = 0 ;j < m ;j++){\n\t\t\tif (flag[i][j] != 1 && in[i][j] == '#'){\n\t\t\t\tdfsv(i,j) ;\n\t\t\t\tsum++ ;\n\t\t\t}\n\t\t}\n\t\t\n\t}\n\tcout << sum << endl ;\n\n\n\n\treturn 0 ;\n\n}",
+			"file": "/home/bardia/Documents/Algorithm/Hw1_1.cpp",
+			"file_size": 1279,
+			"file_write_time": 131321386012328856,
+			"settings":
+			{
+				"buffer_size": 1253,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/bardia/Documents/Algorithm/Hw1_2.cpp",
+			"settings":
+			{
+				"buffer_size": 146,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 72.0,
+		"last_filter": "ssc++",
+		"selected_items":
+		[
+			[
+				"ssc++",
+				"Set Syntax: C++"
+			],
+			[
+				"ssc",
+				"Set Syntax: C"
+			]
+		],
+		"width": 485.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/bardia/Documents/AIChallenge/AIC17-Client-Cpp-2.1.1/AIC.sublime-project",
+		"/home/bardia/Documents/AIChallenge/AIC17-Client-Cpp-2.1.1/AI.cpp",
+		"/home/bardia/Documents/AP/q5.cpp",
+		"/home/bardia/Documents/AP/q4.cpp",
+		"/home/bardia/Documents/AP/q4.pdf",
+		"/home/bardia/Documents/ACM/kruskal.cpp",
+		"/home/bardia/Documents/ACM/mehdi3.cpp",
+		"/home/bardia/Documents/ACM/mehdi33.cpp",
+		"/home/bardia/Documents/ALgo/q.cpp",
+		"/home/bardia/Documents/ALgo/untitled.cpp",
+		"/home/bardia/Documents/ACM/mehdi2.cpp",
+		"/home/bardia/Documents/ACM/mehdi.cpp",
+		"/home/bardia/Documents/ACM/untitled.cpp",
+		"/home/bardia/Desktop/test.c",
+		"/home/bardia/Documents/OOP.cpp",
+		"/home/bardia/Documents/untitled.cpp",
+		"/home/bardia/Documents/2.cpp"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"w",
+			"float",
+			"mark",
+			"matrix",
+			"found",
+			"mark",
+			"matrix",
+			"#include <iostream>\n#include <vector>\n#include <set>\n\nusing namespace std;\nconst int Maxn = 100 * 1000 + 10;\nint n, m;\nint h, f;\n\nvector<int> matrix[Maxn];\n\nbool output(int u, int v);\n\nint main(){\n\tcin >> n >> m;\n\n\tfor (int i = 0 ; i < m ; i++){\n\t\tint u, v;\n\t\tcin >> u >> v;\n\t\tmatrix[u].push_back(v);\n\t\tmatrix[v].push_back(u);\n\t}\n\tcin >> h >> f;\n\n\tbool found = false;\n\tfor (int i = 1 ; i <= n ; i++){\n\t\tif((int)matrix[i].size() < h + 1)\n\t\t\tcontinue;\n\t\tif(found)\n\t\t\tbreak;\n\t\tfor(int j = 0 ; j < (int)matrix[i].size() ; j++){\n\t\t\tint u = i;\n\t\t\tint v = matrix[i][j];\n\t\t\tif((int)matrix[v].size() < f + 1)\n\t\t\t\tcontinue;\n\t\t\tif((int)matrix[u].size() >= h + f + 1 || (int)matrix[v].size() >= h + f + 1){\n\t\t\t\toutput(u, v);\n\t\t\t\tfound = true;\n\t\t\t\tbreak;\n\t\t\t}\n\t\t\tfound = output(u, v);\n\t\t\tif(found)\n\t\t\t\tbreak;\n\t\t}\n\t}\n\tif (!found)\n\t\tcout << \"NO\" << endl;\n\treturn 0;\n}\nint flag[10001];\nbool output(int u, int v){\n\tint count = 0;\n\tfor(int k = 0 ; k < (int)matrix[u].size() ; k++)\n\t\tif(alist[u][k] != v){\n\t\t\tif (flag[alist[u][k]] == 0)\n\t\t\t\tcount ++;\n\t\t\tflag[alist[u][k]] ++;\n\t\t}\n\tfor(int k = 0 ; k < (int)matrix[v].size() ; k++)\n\t\tif(matrix[v][k] != u){\n\t\t\tif (mark[matrix[v][k]] == 0)\n\t\t\t\tcount ++;\n\t\t\tmark[matrix[v][k]] ++;\n\t\t}\n\tif(count < h + f){\n\t\tfor(int k = 0 ; k < (int)matrix[u].size() ; k++)\n\t\t\tif(matrix[u][k] != v)\n\t\t\t\tmark[matrix[u][k]] = 0;\n\t\tfor(int k = 0 ; k < (int)matrix[v].size() ; k++)\n\t\t\tif(matrix[v][k] != u)\n\t\t\t\tmark[matrix[v][k]] = 0;\n\t\treturn false;\n\t}\n\tcout << \"YES\" << endl;\t\n\tcout << u << \" \" << v << endl;\n\n\tint l = 0;\n\tfor(int k = 0 ; k < (int)matrix[u].size() ; k++){\n\t\tif(l < h && mark[matrix[u][k]] == 1){\n\t\t\tcout << (l == 0 ? \"\" : \" \") << matrix[u][k];\n\t\t\tl++;\n\t\t}\n\t}\n\tfor(int k = 0 ; k < (int)matrix[u].size() ; k++){\n\t\tif(l < h && mark[matrix[u][k]] == 2){\n\t\t\tmark[matrix[u][k]] = 0;\n\t\t\tcout << (l == 0 ? \"\" : \" \") << matrix[u][k];\n\t\t\tl++;\n\t\t}\n\t} cout << endl;\n\tl = 0;\n\tfor(int k = 0 ; k < (int)matrix[v].size() ; k++){\n\t\tif(l < f && mark[matrix[v][k]] >= 1){\n\t\t\tcout << (l == 0 ? \"\" : \" \") << matrix[v][k];\n\t\t\tl++;\n\t\t}\n\t} cout << endl;\n\n\treturn true;\n}",
+			"matrix",
+			"count",
+			"size",
+			"Pair",
+			"air",
+			"pair"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"double",
+			"flag",
+			"alist",
+			"flag",
+			"alist"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/bardia/Documents/Algorithm/Hw1_1.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1253,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								94,
+								94
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 91.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/bardia/Documents/Algorithm/Hw1_2.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 146,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								94,
+								94
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "AIC.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 317.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

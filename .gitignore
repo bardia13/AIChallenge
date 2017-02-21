@@ -1,0 +1,15 @@
+*~
+*.o
+*.exe
+*.out
+*.gch
+*.cbp
+*.txt
+.settings/language.settings.xml
+.DS_Store
+.vscode/*
+.idea/*
+cmake*
+CMake*
+.project
+.cproject
